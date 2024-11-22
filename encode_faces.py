@@ -1,3 +1,4 @@
+# import the necessary packages
 import time
 from imutils import paths
 import face_recognition
@@ -6,9 +7,10 @@ import cv2
 import os
 import argparse
 
+# construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-d", "--dataset", required=False, default="/Volumes/MacBackup/friends_family", help="path to input dataset directory")
-ap.add_argument("-e", "--encodings-file", required=False, default='encodings/friends_family_encodings.pkl', help="path to serialized db of facial encodings")
+ap.add_argument("-d", "--dataset", required=False, help="path to input dataset directory")
+ap.add_argument("-e", "--encodings-file", required=False, help="path to serialized db of facial encodings")
 ap.add_argument("-m", "--detection-method", type=str, default='cnn', help="face detection model to use: either 'hog' or 'cnn' ")
 
 

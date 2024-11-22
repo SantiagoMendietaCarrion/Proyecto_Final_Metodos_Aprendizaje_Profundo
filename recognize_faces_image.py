@@ -44,7 +44,7 @@ for encoding in encodings:
     # This function returns a list of True / False  values, one for each image in our dataset.
     # since the dataset has 218 Jurassic Park images, len(matches)=218
     matches = face_recognition.compare_faces(data["encodings"], encoding)
-    name = "Unknown"
+    name = "Desconocido"
 
     # check to see if we have found any matches
     if True in matches:

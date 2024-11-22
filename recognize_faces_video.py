@@ -9,26 +9,13 @@ import time
 import os
 from google.colab.patches import cv2_imshow
 
-"""
-This file assumes the MacBackup drive is connected.
-
---encodings-file encodings/jpark.pkl --output output/webcam_output.avi --display 1
-
-To test using laptop video camera:
---encodings-file encodings/jpark.pkl --input camera
-
-ap.add_argument("-i", "--input", type=str, required=False,
-                default='/Volumes/MacBackup/PyImageSearch/face-recognition-opencv/videos/lunch_scene.mp4',
-                help="path to input video or the word 'camera' to capture video from webcam")
-
-"""
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-e", "--encodings-file", required=True,
                 help="path to serialized db of facial encodings")
 ap.add_argument("-d", "--detection-method", type=str, default='cnn',
                 help="face detection model to use: either 'hog' or 'cnn' ")
-ap.add_argument("-o", "--output", type=str, required=True, help="path to output video DO NOT ADD EXTENSION.  E.g. output/my_test")
+ap.add_argument("-o", "--output", type=str, required=True, help="path to output video")
 ap.add_argument("-y", "--display", type=int, required=True, default=1, help="whether or not to display output frame to screen")
 ap.add_argument("-i", "--input", type=str, required=False,
                 default='camera',
