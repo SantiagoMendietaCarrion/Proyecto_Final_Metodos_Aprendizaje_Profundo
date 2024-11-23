@@ -69,7 +69,7 @@ while True:
     for encoding in encodings:
         # attempt to match each face in the input image to our known encodings
         matches = face_recognition.compare_faces(data['encodings'], encoding, tolerance=0.5)
-        name = "Unknown"
+        name = "Desconocido"
 
         # check to see if we have found any matches
         if True in matches:
